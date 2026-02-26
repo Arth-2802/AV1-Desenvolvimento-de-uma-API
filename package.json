@@ -2,14 +2,15 @@
   "name": "av1",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-    "dev": "node index.js"
+  "scripts": {
+    "dev": "node SRC/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "type": "module"
-
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
-
