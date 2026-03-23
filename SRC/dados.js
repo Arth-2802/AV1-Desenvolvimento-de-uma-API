@@ -3,7 +3,6 @@ export let tarefas = [
   { id: 2, titulo: "Fazer tarefas na AV1", concluida: true },
 ];
 
-// Adicionar um novo objeto ao array com push
 export function adicionarTarefa(titulo) {
   const novaTarefa = {
     id: tarefas.length + 1,
@@ -14,7 +13,6 @@ export function adicionarTarefa(titulo) {
   return novaTarefa;
 }
 
-// Percorrer o array com forEach e retornar todas as tarefas
 export function listarTarefas() {
   const lista = [];
   tarefas.forEach((tarefa) => {
@@ -23,7 +21,17 @@ export function listarTarefas() {
   return lista;
 }
 
-// Buscar uma tarefa pelo id com find
 export function buscarTarefaPorId(id) {
   return tarefas.find((tarefa) => tarefa.id === id);
+}
+
+export function removerTarefaPorId(id) {
+  const indice = tarefas.findIndex((tarefa) => tarefa.id === id);
+
+  if (indice === -1) {
+    return null;
+  }
+
+  const [tarefaRemovida] = tarefas.splice(indice, 1);
+  return tarefaRemovida;
 }

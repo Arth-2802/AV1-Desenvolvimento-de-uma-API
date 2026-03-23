@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node SRC/server.js"
+    "dev": "nodemon SRC/server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "type": "module",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
