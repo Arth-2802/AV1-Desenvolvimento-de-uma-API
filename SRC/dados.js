@@ -35,3 +35,21 @@ export function removerTarefaPorId(id) {
   const [tarefaRemovida] = tarefas.splice(indice, 1);
   return tarefaRemovida;
 }
+
+export function atualizarTarefaPorId(id, dadosAtualizados) {
+  const tarefa = tarefas.find((item) => item.id === id);
+
+  if (!tarefa) {
+    return null;
+  }
+
+  if (typeof dadosAtualizados.titulo === "string") {
+    tarefa.titulo = dadosAtualizados.titulo;
+  }
+
+  if (typeof dadosAtualizados.concluida === "boolean") {
+    tarefa.concluida = dadosAtualizados.concluida;
+  }
+
+  return tarefa;
+}
